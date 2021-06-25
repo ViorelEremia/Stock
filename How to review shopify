@@ -1,3 +1,9 @@
+0. Set in parameters.local.yml 
+
+    shopify_public_key: 'a4790ad6eda4fd42918b30b4ad66fe5a'
+    shopify_secret_key: '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'
+    shopify_local_key: '945a1f7e8f596c153cb76c2ca316816c'
+    
 1. Login in partners https://partners.shopify.com/  -> LogIn
 
   Login: gutentaghunde@yandex.com

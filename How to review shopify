@@ -1,0 +1,39 @@
+1. Login in partners https://partners.shopify.com/  -> LogIn
+
+  Login: gutentaghunde@yandex.com
+  Pass: HelloBrizy
+  1.1 Go -> Apps
+  1.2 Press 'NewApp'
+  1.3 Test your App -> Select store
+  1.4 'Select store' tries to open App if it is installed and install if not
+ To test installing - point 2
+ 
+2. Login in https://accounts.shopify.com/ 
+  2.0 Yous store
+  2.1 Pick store 12brizy.myshopify.com
+  2.2 Apps
+  2.3 Delete NewApp( and again if you interapt installing in debug time
+
+This way app has been deleted from store so you can install it again in https://partners.shopify.com/ point 1
+
+
+Flow ~ after pressing Select Store
+
+Shopify goes to link in partners account whitelist links - App Setup   https://jmp.sh/BNPmG7P https://jmp.sh/sPSBOTE
+1.AuthAction catch shopify request from this white list and we verified credenitals and hmac(methods verifyRequest from shopify forum as recommended solution)
+2.Redirect back to shopify with url 
+  return $this->redirect('https://' . $query['shop'] . '/admin/oauth/authorize?client_id=' .  $this->getParameter('shopify_public_key') .
+            '&scope=write_content&redirect_uri=' . $this->getParameter('shopify_redirect_offline_uri') . '&state=' . $this->getParameter('shopify_local_key'));
+
+When Scope = the banch of rules that we have in access_token. Write pages, change products and others that we ask
+When lacking of '&grant_options[]=per-user' in the end of link make this redirect asking to exactly offline token
+
+2. Shopify make request in public function confirmOfflineTokenAction
+We catch offline permanent access token and put it in session to get it later because we have no other way to save it because we have not any project,user still
+2.1 Make redirect back to shopify to ask online token
+3. Shopify make request to  public function confirmOnlineToken
+We catch online tocken and user Data which wasn't available in offline token request
+Create/auth user, create or get url for project
+
+
+

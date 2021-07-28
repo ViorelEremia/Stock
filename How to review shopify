@@ -1,7 +1,7 @@
 0. Set in parameters.local.yml 
 
-    shopify_public_key: 'a4790ad6eda4fd42918b30b4ad66fe5a'
-    shopify_secret_key: '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'
+    shopify_public_key: 'fe66230fa7c52ec8d80fa9ea68f77ab6'
+    shopify_secret_key: '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'
     shopify_local_key: '945a1f7e8f596c153cb76c2ca316816c'
     
 1. Login in partners https://partners.shopify.com/  -> LogIn
@@ -9,7 +9,7 @@
   Login: gutentaghunde@yandex.com
   Pass: HelloBrizy
   1.1 Go -> Apps
-  1.2 Press 'NewApp'
+  1.2 Press 'BrizyNiceApp'
   1.3 Test your App -> Select store
   1.4 'Select store' tries to open App if it is installed and install if not
  To test installing - point 2

@@ -1,7 +1,7 @@
 
 1.Cloud open collaboration with {$baseHost.com}/collaboration-tool with params 'projectId' and 'itemId' like
   https://beta1.brizy.cloud/collaboration-tool?projectId=191914&itemID=2987 
-  1.1 itemId can be not given in case when user open collaboration via dashboard, so if itemId == null then itemId = indexItemId from futher request
+  1.1 itemId can be not given in case when user open collaboration via dashboard, so if itemId == null then itemId = indexItemId from further request
 
 ----------
 

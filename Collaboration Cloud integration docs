@@ -1,0 +1,28 @@
+
+1.Cloud open collaboration with {$baseHost.com}/collaboration-tool with params 'projectId' and 'itemId' like
+  https://beta1.brizy.cloud/collaboration-tool?projectId=191914&itemID=2987 
+  1.1 itemId can be not given in case when user open collaboration via dashboard, so if itemId == null then itemId = indexItemId from futher request
+
+----------
+
+Other config you can retrive via endpoint 
+    {$baseHost.com}/collaboration-tool/{project}/config
+  
+Response will be:
+
+            'collectionAPI' 
+            'collaborationAPI' 
+            'platformUser'                              ->currentUser
+            'pagePreview'                               
+            'indexItemId'                                // note: When production or dev will get CollectionApi 1.3.30+ all pages will get param 'isHomePage' 
+                                                               so you probably can use it to find indexPage
+
+------------------------------------------
+
+In the inner iframe you need replace a src hardcode with realy endpoint that get you html for any page even in draft mode
+
+enpoint url: 
+              $basehost/api/projects/{project}/pages/{page}/html  
+
+
+-----------------------------------------

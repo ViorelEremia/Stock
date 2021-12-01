@@ -19,7 +19,7 @@ Response will be:
 
 ------------------------------------------
 
-In the inner iframe you need replace a src hardcode with realy endpoint that get you html for any page even in draft mode
+In the inner iframe you need replace a src hardcode with real endpoint that get you html for any page even in draft mode
 
 enpoint url: 
               $basehost/api/projects/{project}/pages/{page}/html  
